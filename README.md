@@ -6,10 +6,7 @@ Register-level embedded C examples for the STM32 Nucleo-C031C6 board: small, ind
 
 - **Board:** STMicroelectronics NUCLEO-C031C6
 - **MCU:** STM32C031C6Tx, Arm Cortex-M0+
-- **Console:** USART2 TX on PA2, 9600 baud, 12 MHz peripheral clock
 - **Peripheral access:** CMSIS device headers and direct register manipulation
-
-Each directory under `Drivers/` is a separate firmware image; there is no global build system.
 
 ## Examples
 
