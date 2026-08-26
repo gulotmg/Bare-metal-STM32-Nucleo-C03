@@ -115,7 +115,7 @@ void spi1_transmitter(uint8_t *data, uint32_t size)
         /* communication in SPI is full-duplex, for every SCK impulse there's an outgoing bit (MOSI) and
          * an incoming bit (MISO). This means that when I send a byte to sensor, I receive a byte that
          * I actually don't need that is stocked in the RxFIFO. This means that if I don't read the FIFO,
-         * for every iteration, with 'temp' I'll have an overrun error eventually (second byte sent).
+         * with 'temp' for every iteration, I'll have an overrun error eventually (second byte sent).
          * For this reason it's important to wait for RX to be not empty and then read. The read operation
          * automatically clears the content of the RxFIFO preventing Overrun issues (clears OVR flag in SR).
          * Failing to do so implies to read some "00000..." values due to OVR issues.
