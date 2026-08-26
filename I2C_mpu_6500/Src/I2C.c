@@ -122,7 +122,7 @@ void i2c1_multi_write(uint8_t slave_address, uint32_t k, uint8_t *data)
             if (I2C1 -> ISR & (1U << 4))
             { // NACKF detected
                 I2C1 -> ICR |= (1U << 4);  // Clear NACK flag
-                return; //exit from everything, just see diagrams and it's more clear, this is KEY!
+                return; //exit from everything, just see diagrams in Reference Manual and it'll be more clear, this is KEY!
             }
         }
 
