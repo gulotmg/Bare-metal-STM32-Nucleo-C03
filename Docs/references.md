@@ -28,8 +28,7 @@ redistributed in this repository.
 
 - [GitHub: libdriver/mpu6500](https://github.com/libdriver/mpu6500)
   Full-featured open-source C driver for the MPU-6500 (MCU and Linux
-  platforms); used as a reference for the register initialization
-  sequence and the I²C/SPI readout of the accelerometer.
+  platforms); inside, you can find the documentation needed in /datasheet.
 
 ## ARM core
 
