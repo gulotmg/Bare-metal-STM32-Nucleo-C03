@@ -33,7 +33,28 @@ Both MPU-6500 examples configure the accelerometer for ±4 g (8192 LSB/g) with a
 | SPI1 | MOSI | **PA7** | Alternate function 0 |
 | SPI1 | CS/NSS | **PA4** | GPIO output, manual active-low chip select |
 
-Logic analyser captures of the I²C and SPI transactions will be added to this section.
+## Logic analyzer captures
+
+SPI1 and I²C1 traffic while talking to the MPU-6500, captured with a logic analyzer.
+
+**SPI1 – initialization**
+<img src="https://github.com/user-attachments/assets/7fdc65d5-7fd0-4443-9f97-b524d37d85ee" alt="SPI1 initialization" width="900">
+- *Configuration phase: register writes that initialise the MPU-6500*
+
+
+**SPI1 – steady state**
+<img src="https://github.com/user-attachments/assets/1e38813f-1c0a-453e-95e7-22a6c8aa29a3" alt="SPI1 steady state" width="900">
+- *Runtime: the sensor continuously streaming the acquired X/Y/Z samples.*
+---
+**I²C1 – initialization**
+<img src="https://github.com/user-attachments/assets/9b3010cc-b26c-448b-b68f-0fadb5425f91" alt="I2C1 initialization" width="900">
+- *Configuration phase: WHO_AM_I and setup writes to the MPU-6500.*
+
+**I²C1 – steady state**
+<img src="https://github.com/user-attachments/assets/01f68828-3d89-4b8b-8401-cd6bfeb68aea" alt="I2C1 steady state" width="900">
+- *Runtime: repeated accelerometer reads.*
+
+
 
 ## Repository layout
 
