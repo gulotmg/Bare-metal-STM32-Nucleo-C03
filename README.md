@@ -8,6 +8,20 @@ Register-level embedded C examples for the STM32 Nucleo-C031C6 board: small, ind
 - **MCU:** STM32C031C6Tx, Arm Cortex-M0+
 - **Peripheral access:** CMSIS device headers and direct register manipulation
 
+## Repository layout
+
+```text
+Drivers/
+  ADC/
+  EXTI/
+  I2C_mpu_6500/
+  IWDG/
+  RTC/
+  SPI_mpu_6500/
+  UART/
+```
+
+
 ## Examples
 
 | Directory | Demonstrates | Main observable behaviour |
@@ -54,22 +68,6 @@ SPI1 and I²C1 traffic while talking to the MPU-6500, captured with a logic anal
 **I²C1 – steady state**
 <img src="https://github.com/user-attachments/assets/9b3010cc-b26c-448b-b68f-0fadb5425f91" alt="I2C1 initialization" width="900">
 - *Runtime: repeated accelerometer reads.*
-
-
-
-
-## Repository layout
-
-```text
-Drivers/
-  ADC/
-  EXTI/
-  I2C_mpu_6500/
-  IWDG/
-  RTC/
-  SPI_mpu_6500/
-  UART/
-```
 
 ## Flashing
 
