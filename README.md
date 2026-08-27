@@ -46,13 +46,16 @@ SPI1 and I²C1 traffic while talking to the MPU-6500, captured with a logic anal
 <img src="https://github.com/user-attachments/assets/1e38813f-1c0a-453e-95e7-22a6c8aa29a3" alt="SPI1 steady state" width="900">
 - *Runtime: the sensor continuously streaming the acquired X/Y/Z samples.*
 ---
+
 **I²C1 – initialization**
+<img src="https://github.com/user-attachments/assets/01f68828-3d89-4b8b-8401-cd6bfeb68aea" alt="I2C1 steady state" width="900">
+- *Runtime: repeated accelerometer reads.*
+
+
+**I²C1 – steady state**
 <img src="https://github.com/user-attachments/assets/9b3010cc-b26c-448b-b68f-0fadb5425f91" alt="I2C1 initialization" width="900">
 - *Configuration phase: WHO_AM_I and setup writes to the MPU-6500.*
 
-**I²C1 – steady state**
-<img src="https://github.com/user-attachments/assets/01f68828-3d89-4b8b-8401-cd6bfeb68aea" alt="I2C1 steady state" width="900">
-- *Runtime: repeated accelerometer reads.*
 
 
 
