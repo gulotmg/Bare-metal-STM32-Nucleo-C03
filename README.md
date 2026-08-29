@@ -8,6 +8,8 @@ Register-level embedded C examples for the STM32 Nucleo-C031C6 board: small, ind
 - **MCU:** STM32C031C6Tx, Arm Cortex-M0+
 - **Peripheral access:** CMSIS device headers and direct register manipulation
 
+---
+
 ## Repository layout
 
 ```text
@@ -23,6 +25,8 @@ Drivers/
   UART/
 ```
 
+---
+
 ## Examples
 
 | Directory | Demonstrates | Main observable behaviour |
@@ -36,6 +40,8 @@ Drivers/
 | `Drivers/RTC` | LSE-backed RTC calendar | Initialises a fixed date and time, then continuously prints the decoded time, date and weekday |
 | `Drivers/I2C_mpu_6500` | I²C1 master and MPU-6500 | Reads the device ID and the accelerometer registers at address `0x68`, then prints X/Y/Z in g |
 | `Drivers/SPI_mpu_6500` | SPI1 master and MPU-6500 | Configures the SPI mode, reads the accelerometer registers and prints X/Y/Z in g |
+
+---
 
 ## PWM and ADC pinout (Potentiometer setup)
 
@@ -60,6 +66,8 @@ The resulting PWM waveform is available on **PA8** (CN10 pin 1). Probe it with a
 | ADC1 | IN1 (Analog Input) | **PA1** | Analog mode, 12.5-cycle sampling, continuous + DMA circular |
 | TIM1 | CH1 (PWM Output) | **PA8** | Alternate Function 2 (AF2), push-pull, PWM Mode 1 |
 | DMA1 | Channel 1 | *Internal* | Peripheral-to-peripheral, `ADC1->DR` → `TIM1->CCR1`, circular, via DMAMUX request 5 |
+
+---
 
 ## I²C and SPI pinout
 
@@ -86,8 +94,6 @@ SPI1 and I²C1 traffic while talking to the MPU-6500, captured with a logic anal
 <img src="https://github.com/user-attachments/assets/1e38813f-1c0a-453e-95e7-22a6c8aa29a3" alt="SPI1 steady state" width="900">
 - *Runtime: the sensor continuously streaming the acquired X/Y/Z samples.*
 
----
-
 **I²C1 – initialization**
 <img src="https://github.com/user-attachments/assets/01f68828-3d89-4b8b-8401-cd6bfeb68aea" alt="I2C1 steady state" width="900">
 - *Configuration phase: WHO_AM_I and setup writes to the MPU-6500.*
@@ -96,15 +102,21 @@ SPI1 and I²C1 traffic while talking to the MPU-6500, captured with a logic anal
 <img src="https://github.com/user-attachments/assets/9b3010cc-b26c-448b-b68f-0fadb5425f91" alt="I2C1 initialization" width="900">
 - *Runtime: repeated accelerometer reads.*
 
+---
+
 ## Flashing
 
 Use the on-board ST-LINK or any compatible programmer to flash the generated `.elf`, `.hex` or `.bin` image.
 
+---
+
 ## Notes
 
 - Peripheral initialisation is explicit and register-oriented: no STM32 HAL or LL layers.
-- Timing relies on busy-wait loops and fixed clock assumptions; the examples are not optimised for production use — they provide a good starting point.
+- The examples serve the purpose of being a good starting point for more complex hardware, they are not the best representation of what could be done. It's just a collection of bare-metal code I wrote and used for more complex purposes.
 - The code is hardware-specific: on different boards, check alternate functions, pull-ups, oscillators, clock values and equivalent (or not) registers.
+
+---
 
 ## License
 
