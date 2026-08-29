@@ -74,7 +74,7 @@ uint32_t ADC_read(void){
 	 	 	 	 	 	 	 	   next instruction*/}
 
 
-	//write inside the DATA register (data will be passed via UART and taken from here)
+	//read from the DATA register (data will be passed via UART for debug purposes)
 	return (ADC1 -> DR);
 
 
