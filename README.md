@@ -9,6 +9,20 @@ Register-level embedded C examples for the STM32 Nucleo-C031C6 board: small, ind
 - **Peripheral access:** CMSIS device headers and direct register manipulation
 
 ---
+## Download and Clone
+
+### Clone with Git
+
+```bash
+git clone https://github.com/gulotmg/Bare-metal-STM32-Nucleo-C03.git
+cd Bare-metal-STM32-Nucleo-C03
+```
+
+### Download as ZIP
+
+[Download ZIP](https://github.com/gulotmg/Bare-metal-STM32-Nucleo-C03/archive/refs/heads/main.zip)
+
+---
 
 ## Repository layout
 
