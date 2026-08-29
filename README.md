@@ -104,12 +104,6 @@ SPI1 and I²C1 traffic while talking to the MPU-6500, captured with a logic anal
 
 ---
 
-## Flashing
-
-Use the on-board ST-LINK or any compatible programmer to flash the generated `.elf`, `.hex` or `.bin` image.
-
----
-
 ## Notes
 
 - Peripheral initialisation is explicit and register-oriented: no STM32 HAL or LL layers.
