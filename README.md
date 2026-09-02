@@ -29,11 +29,10 @@ cd Bare-metal-STM32-Nucleo-C03
 ```text
 Drivers/
   ADC/
-  DMA/
   EXTI/
   I2C_mpu_6500/
   IWDG/
-  PWM/
+  PWM & TIM1/
   RTC/
   SPI_mpu_6500/
   UART/
