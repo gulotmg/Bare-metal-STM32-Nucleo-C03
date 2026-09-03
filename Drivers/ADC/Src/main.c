@@ -2,8 +2,6 @@
 #include "adc.h"
 #include "uart.h"
 
-//includere uart (scrivere driver)
-
 
 int sensor_sample;
 
